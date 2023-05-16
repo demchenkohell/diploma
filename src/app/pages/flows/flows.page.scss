@@ -1,0 +1,26 @@
+.card-new {
+  position:relative;
+
+  .buttons-wrapper {
+    backdrop-filter: blur(2px);
+    position: absolute;
+    bottom:0;
+    right:0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .deny-button {
+    height: 4em;
+    width: 35%;
+    padding: 8px;
+  }
+
+  .follow-button {
+    height: 4em;
+    width: 55%;
+    padding: 8px;
+  }
+}
+
+

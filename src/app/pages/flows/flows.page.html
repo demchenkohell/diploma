@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      My Flows
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let item of flow">
+    <ion-card class="card-new" (click)="selectCard(item.id)">
+      <ion-card-header>
+        <ion-card-title>{{item.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{item.content}}
+      </ion-card-content>
+      <div class="buttons-wrapper">
+        <ion-button shape="round" color="light" class="deny-button">Not show</ion-button>
+        <ion-button shape="round" color="primary" class="follow-button" >Interested</ion-button>
+      </div>
+    </ion-card>
+  </div>
+
+  <div *ngIf="!flow.length">
+    No news found
+  </div>
+</ion-content>

@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-searchbar animated="true" placeholder="Search news"></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let item of newsSet">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>{{item.title}}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        {{item.content}}
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+  <div *ngIf="!newsSet.length">
+    No news found
+  </div>
+</ion-content>
